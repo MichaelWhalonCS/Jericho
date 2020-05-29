@@ -1,14 +1,22 @@
-let changeColor = document.getElementById('changeColor');
 
-changeColor.onclick = function(element) {
-    let color = element.target.value;
-    chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
-      chrome.tabs.executeScript(
-          tabs[0].id,
-          {code: 'document.body.style.backgroundColor = "' + color + '";'});
-    });
-  };
-chrome.storage.sync.get('color', function(data) {
-  changeColor.style.backgroundColor = data.color;
-  changeColor.setAttribute('value', data.color);
+
+let openIncognito = document.getElementById('openIncognito');
+openIncognito.onclick = function(element) {
+
+}
+
+
+
+
+
+
+// The below function has the potential to open an incognito window 
+
+
+
+//This function makes url into the current tab
+chrome.tabs.query({active: true, lastFocusedWindow: true}, tabs => {
+  let url = tabs[0].url;
+  console.log(url)
+  chrome.windows.create({url: url},)
 });

@@ -1,8 +1,12 @@
 {
-    "name": "Getting Started Example",
+    "name": "Jericho",
+    "options_ui": {
+      "page": "options.html",
+      "open_in_tab": true
+    },
     "version": "1.0",
-    "description": "Build an Extension!",
-    "permissions": ["activeTab", "declarativeContent", "storage"],
+    "description": "Open current tab in incognito!",
+    "permissions": ["activeTab", "declarativeContent", "storage","tabs"],
     "background": {
       "scripts": ["background.js"],
       "persistent": false
