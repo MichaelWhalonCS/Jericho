@@ -18,7 +18,7 @@ openIncognito.onclick = function(element) {
 chrome.tabs.query({active: true, lastFocusedWindow: true}, tabs => {
   let url = tabs[0].url;
   console.log(url)
-  chrome.windows.create({url: url},{openIncognito=true})
+  chrome.windows.create({url: url, incognito: true})
 });
 
 // , {incognito:true}
