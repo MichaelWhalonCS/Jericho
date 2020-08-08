@@ -1,5 +1,5 @@
 # Jericho
-Chrome Extension to bypass Medium Paywall
+Chrome Extension to bypass blog paywalls.
 
 Release 0: YOU ARE HERE
 When on any url that contains "medium.com", click the extension in order to open an incognito tab of the same url
